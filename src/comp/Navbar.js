@@ -15,7 +15,12 @@ function Navbar({ isPanelOpen, togglePanel }) {
     return (
         <div className='fixed w-full z-10 border-zinc-100 bg-sienna text-floralwhite flex justify-between items-center'>
             <div>
-                <Link to="/" className='flex m-5 point'>
+                <Link to="/" className='flex m-5 point'
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/";
+                    }}
+                >
                     <img className='h-12 md:h-20 w-auto md:mr-5' src={logo} alt='seac logo' />
                     <img className='h-12 md:h-20 w-auto ml-3 md:ml-5' src={logoText} alt='seac text logo' />
                 </Link>

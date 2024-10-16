@@ -24,7 +24,12 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                         <img className='w-8 md:w-12 h-auto  zoomin t200e fadein80 hover:rotate-180' src={cross} alt='cross icon' />
                     </a>
 
-                    <Link to='/' className='mx-5 point'>
+                    <Link to='/' className='mx-5 point'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = "/";
+                        }}
+                    >
                         <img className='h-12 md:h-20 w-auto ' src={logo} alt='seac logo' />
                     </Link>
                 </div>
