@@ -3,7 +3,7 @@ import '../output.css';
 
 function AboutTab() {
     return (
-        <div className="w-screen h-screen relative overflow-hidden pt-32">
+        <div id='about' className="w-screen h-screen relative overflow-hidden pt-32">
             <div className="">
                 <h1 className="title">
                     About Tab
