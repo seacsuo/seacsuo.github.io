@@ -1,5 +1,5 @@
 {
-  "homepage": "https://seacsuo.github.com/seacsuo.github.io",
+  "homepage": "https://seacsuo.github.io/",
   "name": "seacsuo.github.io",
   "version": "0.1.0",
   "private": true,
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "react-router-dom": "^6.27.0"
   }
 }
