@@ -15,7 +15,7 @@ function Footer() {
                             <img className="w-24 h-auto" src={rmlogo} alt="rin meng logo" />
                         </a>
                     </span>
-                    See our <a href="" target="_blank" rel="noopener"
+                    See our <a href="https://github.com/seacsuo/seacsuo.github.io/blob/main/LICENSE" target="_blank" rel="noopener"
                         className="underline hover:text-slate-900 t200e">GitHub</a> for more info on licensing.
                 </p>
             </div>
