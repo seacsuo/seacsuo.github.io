@@ -5,7 +5,7 @@ import locationLogo from '../../imgs/icons/locationlogo.png';
 
 function YWLList({ img, name, location, desc }) {
     return (
-        <div className="flex flex-col lg:flex-row justify-center items-center p-5 md:mp5">
+        <div className="flex flex-col lg:flex-row justify-center items-center md:mp5">
             <img className='w-5/6 lg:w-5/12 h-auto md:m-5' src={img} alt='' />
             <div className='m-5'>
                 <h1 className="text-4xl md:text-5xl font-bold text-darkslateblue">

@@ -23,7 +23,7 @@ function YWL() {
 
             <div id="ywl" className="bg-floralwhite text-sienna drop-shadow-2xl mp5">
                 <div className="">
-                    <h1 className="title text-sienna">
+                    <h1 className="title text-center text-sienna m-5">
                         SEA in Kelowna
                     </h1>
                 </div>

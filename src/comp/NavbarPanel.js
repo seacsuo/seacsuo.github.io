@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import '../output.css';
 import cross from '../imgs/icons/cross.png';
@@ -10,10 +9,22 @@ import logo from '../imgs/seaclogotext.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Define the navigation links and their paths in an array
+const navLinks = [
+    { to: '/about', text: 'About Us' },
+    { to: '/events', text: 'SEAC Events' },
+    { to: '/ywl', text: 'SEA in YWL' },
+    { to: '/contact', text: 'Contact' },
+];
 
+
+const footerIcons = [
+    { href: 'https://www.instagram.com/seac.suo/?theme=dark', src: instagramLogo, alt: 'instagram icon' },
+    { href: 'mailto:seac.suo@gmail.com', src: mailLogo, alt: 'mail icon' },
+    { href: 'https://www.linkedin.com/in/southeast-asian-club-seac-980a43331/', src: linkedinLogo, alt: 'linkedin icon' },
+];
 
 function NavbarPanel({ isPanelOpen, togglePanel }) {
-    // Dynamically set z-index based on isVisible prop
     const panel = isPanelOpen ? 'opacity-100 z-30' : 'opacity-0 -z-10';
 
     return (
@@ -36,64 +47,31 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                     </Link>
                 </div>
 
-                <ul className='flex flex-col justify-center items-center font-semibold text-center'>
-                    <li className='m-5 point'>
-                        <Link to='/about' className='flex justify-center items-center point group mx-3'>
-                            <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
-                            <p className='-translate-x-5 group-hover:-translate-x-1 fadein80 t200e text-3xl md:text-4xl '>
-                                About Us
-                            </p>
-                        </Link>
-                    </li>
-                    <li className='m-5 point'>
-                        <Link to='/events' className='flex justify-center items-center point group mx-3'>
-                            <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
-                            <p className='-translate-x-5 group-hover:-translate-x-1 fadein80 t200e text-3xl md:text-4xl'>
-                                SEAC Events
-                            </p>
-                        </Link>
-                    </li>
-                    <li className='m-5 point'>
-                        <Link to='/ywl' className='flex justify-center items-center point group mx-3'>
-                            <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
-                            <p className='-translate-x-5 group-hover:-translate-x-1 fadein80 t200e text-3xl md:text-4xl'>
-                                SEA in YWL
-                            </p>
-                        </Link>
-                    </li>
-                    <li className='m-5 point'>
-                        <Link to='/contact' className='flex justify-center items-center point group'>
-                            <img src={chevron} className='w-8 h-auto mx-3 opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
-                            <p className='-translate-x-8 group-hover:-translate-x-4 fadein80 t200e text-3xl md:text-4xl'>
-                                Contact
-                            </p>
-                        </Link>
-                    </li>
+                <ul className='flex flex-col justify-center items-center font-extralight text-center text-3xl md:text-4xl '>
+                    {navLinks.map((link, index) => (
+                        <li key={index} className='m-5 point'>
+                            <Link to={link.to} className='flex justify-center items-center point group mx-3'>
+                                <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
+                                <p className='-translate-x-5 group-hover:-translate-x-1 fadein80 t200e'>{link.text}</p>
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
 
-                <div className='absolute right-0 bottom-0 m-5'>
+                <div className='absolute right-0 bottom-0 m-10'>
                     <ul className='flex'>
-                        <li>
-                            <a target='_blank' href='https://www.instagram.com/seac.suo/?theme=dark' className='point'>
-                                <img className='w-12 md:w-16 h-auto mx-3 nudgeup t200e fadein80' src={instagramLogo} alt='instagram icon' />
-                            </a>
-                        </li>
-                        <li>
-                            <a target='_blank' href='mailto:seac.suo@gmail.com' className='point'>
-                                <img className='w-12 md:w-16 h-auto mx-3 nudgeup t200e fadein80' src={mailLogo} alt='mail icon' />
-                            </a>
-                        </li>
-                        <li>
-                            <a target='_blank' href='https://www.linkedin.com/in/southeast-asian-club-seac-980a43331/' className='point' rel="noreferrer">
-                                <img className='w-12 md:w-16 h-auto mx-3 nudgeup t200e fadein80' src={linkedinLogo} alt='linkedin icon' />
-                            </a>
-                        </li>
+                        {footerIcons.map((icon, index) => (
+                            <li key={index}>
+                                <a target='_blank' href={icon.href} className='point' rel="noreferrer">
+                                    <img className='w-12 md:w-16 h-auto mx-3 nudgeup t200e fadein80' src={icon.src} alt={icon.alt} />
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
             <nav>
                 <div id="blur-panel" className={`fixed w-full h-full bg-black t500e  ${isPanelOpen ? 'opacity-75 z-20 ' : ' opacity-0 '}`}></div>
-
             </nav>
         </div>
     );

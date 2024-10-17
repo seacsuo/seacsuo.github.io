@@ -91,6 +91,10 @@
   }
 
   .title {
-    @apply text-center text-7xl py-5;
+    @apply font-thin text-5xl md:text-7xl;
+  }
+
+  .para {
+    @apply md:text-3xl;
   }
 }

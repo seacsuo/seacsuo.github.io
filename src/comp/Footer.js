@@ -3,10 +3,14 @@
 
 import '../output.css';
 import rmlogo from '../imgs/rmlogo.png';
+import instagramLogo from '../imgs/icons/instagramlogo.png';
+import mailLogo from '../imgs/icons/maillogo.png';
+import linkedinLogo from '../imgs/icons/linkedinlogo.png';
 
 function Footer() {
     return (
         <div className='relative bg-sienna text-floralwhite text-center py-5 '>
+
             <div className="text-center text-white mp5">
                 <p>&#169; 2024 SEAC ("South East Asian Club") v1.0
                     <br />All rights reserved. Website presented to you by

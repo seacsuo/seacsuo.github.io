@@ -15,12 +15,12 @@ function About() {
             </div>
 
             <div className='bg-floralwhite text-sienna drop-shadow-2xl mp5'>
-                <h1 className="title">About Us</h1>
+                <h1 className="title text-center">About Us</h1>
 
                 <div className='flex flex-col xl:flex-row justify-center items-center'>
                     <img className='w-3/5  md:w-1/5 h-auto m-5' src={seacLogo} alt='seac logo' />
 
-                    <p className='text-black text-md md:text-3xl m-5 max-w-screen-md tracking-wider leading-relaxed'>
+                    <p className='text-black para font-light m-5 max-w-screen-md tracking-wider leading-relaxed'>
                         South East Asian Club (SEAC) is a part of  Student Union Okanagan (SUO) at UBC Okanagan.
                         Our mission is to create a vibrant and inclusive community that celebrates,
                         shares, and promotes the rich cultural heritage of Southeast Asia,

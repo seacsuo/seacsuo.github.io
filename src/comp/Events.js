@@ -25,7 +25,7 @@ function Events() {
             </div>
 
             <div className=" h-auto relative overflow-hidden bg-sienna p-5 drop-shadow-2xl">
-                <h1 className="title text-white">
+                <h1 className="title text-center text-white">
                     Events
                 </h1>
                 <div className='flex flex-row flex-wrap justify-around items-center'>
