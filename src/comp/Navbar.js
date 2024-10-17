@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar({ isPanelOpen, togglePanel }) {
     return (
-        <div className='fixed w-full z-10 border-zinc-100 bg-sienna text-floralwhite flex justify-between items-center'>
+        <div className={`${isPanelOpen ? 'opacity-0' : 'opacity-100'} t200e fixed w-full z-10 border-zinc-100 bg-sienna text-floralwhite flex justify-between items-center drop-shadow-2xl`}>
             <div>
                 <Link to="/" className='flex m-5 point'
                     onClick={(e) => {

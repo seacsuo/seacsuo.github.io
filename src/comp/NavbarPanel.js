@@ -19,17 +19,19 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
     return (
         <div>
             <div id='navbar-panel' className={`${panel} t200e glass-darkolivegreen fixed w-4/5 md:w-3/5 lg:w-3/6 xl:w-2/6 h-full top-0 right-0 rounded-l-xl text-floralwhite`}>
-                <div className='flex items-center justify-between'>
-                    <a className='m-10 point' onClick={togglePanel}>
-                        <img className='w-8 md:w-12 h-auto  zoomin t200e fadein80 hover:rotate-180' src={cross} alt='cross icon' />
+                <div className='flex items-center justify-between '>
+                    <a className='m-10 point flex group  items-center justify-center' onClick={togglePanel}>
+                        <img className='w-10 md:w-12 h-auto  group-hover:zoomin t200e fadein80 group-hover:rotate-180' src={cross} alt='cross icon' />
+                        <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 translate-x-3 rotate-180 group-hover:translate-x-0 t200e' alt='chevron icon' />
                     </a>
 
-                    <Link to='/' className='mx-5 point'
+                    <Link to='/' className='m-5 point fadein80 t200e flex group items-center justify-center'
                         onClick={(e) => {
                             e.preventDefault();
                             window.location.href = "/";
                         }}
                     >
+                        <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 -translate-x-3  group-hover:translate-x-0 t200e' alt='chevron icon' />
                         <img className='h-12 md:h-20 w-auto ' src={logo} alt='seac logo' />
                     </Link>
                 </div>
