@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useState } from 'react'; // Import useState
@@ -7,16 +8,10 @@ import media90 from '../imgs/media90.png';
 import chevron from '../imgs/icons/arrowright.png';
 
 function AboutTab() {
-    const [showMerchDetails, setShowMerchDetails] = useState(false); // State for visibility
     const merchImages = [
         media90, media90, media90, media90, media90,
         media90, media90, media90, media90, media90
     ];
-
-    // Function to toggle visibility
-    const toggleMerchDetails = () => {
-        setShowMerchDetails(true);
-    };
 
     return (
         <div id='about' className="w-screen relative overflow-hidden ">
@@ -59,7 +54,7 @@ function AboutTab() {
                     </ul>
                 </div>
 
-                <div className="m-5 lg:m-10 drop-shadow-2xl rounded-xl bg-floralwhite text-black">
+                <div className="border-darkolivegreen border-4 m-5 lg:m-10 drop-shadow-2xl rounded-xl bg-floralwhite text-black">
                     <h1 className="py-10 title text-center">Merch</h1>
                     <div className='text-left flex flex-col xl:flex-row justify-around items-center mp3 lg:mp5'>
                         <div className='text-center lg:text-left lg:mp5'>
@@ -72,36 +67,20 @@ function AboutTab() {
                         <img className='w-full xl:w-1/3 h-auto' src={media} alt='goals' />
                     </div>
 
-                    <div className='drop-shadow-2xl rounded-xl bg-darkolivegreen text-white p-5 flex flex-col justify-center items-center'>
+                    <div className='drop-shadow-2xl  bg-darkolivegreen text-white p-5 flex flex-col justify-center items-center'>
                         <div className='flex justify-center flex-wrap'>
                             {merchImages.map((imageSrc, index) => (
                                 <img key={index} className='h-32 lg:h-52 w-auto m-5 lg:m-10' src={imageSrc} alt={`merch item ${index + 1}`} />
                             ))}
                         </div>
 
-                        <a href='#buymerch' onClick={toggleMerchDetails} className='group flex justify-center items-center btn-yellow text-2xl m-5'>
+                        <a target='_blank' href='https://campus.hellorubric.com/?s=7807&merchid=8669' className='group flex justify-center items-center btn-yellow text-2xl m-5'>
                             Buy Merch
-                            <img className={`${showMerchDetails ? 'rotate-90' : 'rotate-0'}  w-8 h-auto opacity-0 -translate-x-3  group-hover:translate-x-2 group-hover:opacity-100 t200e`} src={chevron} alt='arrow'></img>
+                            <img className='w-8 h-auto opacity-0 -translate-x-3 group-hover:translate-x-2 group-hover:opacity-100 t200e' src={chevron} alt='arrow'></img>
                         </a>
                     </div>
                 </div>
-                <div id='buymerch' className='py-20'>
 
-                </div>
-
-                {showMerchDetails && (
-                    <div className={`${showMerchDetails ? 'opacity-100' : 'opacity-0'} flex justify-center items-center flex-col t200e  p-10 drop-shadow-2xl`}>
-                        <h2 className="title text-center">Please fill out this form below!</h2>
-                        <iframe
-                            className='py-10'
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSddqw-Lo2tW2QBDFgpOuGG3ElIbV-lo7RWzZMvQT5nePtpzrQ/viewform?embedded=true"
-                            width="100%"
-                            height="2700"
-                        >
-                            Loading…
-                        </iframe>
-                    </div>
-                )}
             </div>
         </div>
     );

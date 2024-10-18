@@ -51,7 +51,7 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                 {/* navLinks */}
                 <ul className='flex flex-col justify-center items-center font-extralight text-center text-3xl md:text-4xl '>
                     {navLinks.map((link, index) => (
-                        <li key={index} className='m-5 point'>
+                        <li key={index} className='m-5 point' onClick={togglePanel} >
                             <Link to={link.to} className='flex justify-center items-center point group mx-3'>
                                 <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 group-hover:-translate-x-3 t200e' alt='chevron icon' />
                                 <p className='-translate-x-5 group-hover:-translate-x-1 fadein80 t200e'>{link.text}</p>

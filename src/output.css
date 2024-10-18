@@ -1024,9 +1024,18 @@ video {
   border-bottom-left-radius: 0.75rem;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-zinc-100 {
   --tw-border-opacity: 1;
   border-color: rgb(244 244 245 / var(--tw-border-opacity));
+}
+
+.border-darkolivegreen {
+  --tw-border-opacity: 1;
+  border-color: rgb(26 80 24 / var(--tw-border-opacity));
 }
 
 .bg-black {
