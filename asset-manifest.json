@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c4ee1e05.css",
-    "main.js": "/static/js/main.543b980c.js",
+    "main.js": "/static/js/main.bbe04eaf.js",
     "static/media/seaclogo.png": "/static/media/seaclogo.300b7c479eea7cbe5b2c.png",
     "static/media/expo.jpg": "/static/media/expo.15ee1ee302e38e7057e7.jpg",
     "static/media/padthai.jpg": "/static/media/padthai.47431077521931e303ca.jpg",
@@ -16,10 +16,10 @@
     "static/media/navbaricon.png": "/static/media/navbaricon.fe6cb25ce11b921920f8.png",
     "index.html": "/index.html",
     "main.c4ee1e05.css.map": "/static/css/main.c4ee1e05.css.map",
-    "main.543b980c.js.map": "/static/js/main.543b980c.js.map"
+    "main.bbe04eaf.js.map": "/static/js/main.bbe04eaf.js.map"
   },
   "entrypoints": [
     "static/css/main.c4ee1e05.css",
-    "static/js/main.543b980c.js"
+    "static/js/main.bbe04eaf.js"
   ]
 }
