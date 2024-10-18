@@ -16,10 +16,10 @@ function AboutTab() {
     return (
         <div id='about' className="w-screen relative overflow-hidden ">
             <div id='a' className='py-16'></div>
-            <div className="m-5 lg:m-10 bg-darkolivegreen text-white rounded-xl">
-                <h1 className="py-10 title text-center">History of SEAC</h1>
-                <div className='flex flex-col xl:flex-row justify-center items-center mp3 xl:mp5'>
-                    <p className='para mp3 xl:mp5 font-extralight'>
+            <div className="m-5 lg:m-10  bg-darkolivegreen drop-shadow-2xl text-white rounded-xl">
+                <h1 className='py-5 lg:py-10 title text-center'>History of SEAC</h1>
+                <div className='flex flex-col xl:flex-row justify-center items-center p-5 xl:mp5'>
+                    <p className='para pb-5 xl:mp5 font-extralight'>
                         SEAC was founded around a decade ago
                         (we’re digging through the old
                         &nbsp;
@@ -42,16 +42,18 @@ function AboutTab() {
             </div>
 
             <div className="my-10 bg-floralwhite text-black">
-                <h1 className="py-10 title text-center">Our Goals</h1>
-                <div className='flex flex-col xl:flex-row justify-center items-center mp5 xl:mp5'>
-                    <img className='w-full xl:w-1/2 h-auto' src={media} alt='goals' />
-                    <ul className='para mp3 xl:p-10 font-extralight list-disc'>
-                        <li>Create a strong, connected, and inclusive community for all students.</li>
-                        <br />
-                        <li>Provide and facilitate a wide range of events/projects intertwined with SEA culture to share the SEA experience with all students at UBCO.</li>
-                        <br />
-                        <li>Educate students in our community about Southeast Asia and all that it has to offer; sharing and teaching about the aspects and perspectives beyond what is often portrayed in the Western world, if at all included.</li>
-                    </ul>
+                <div className='drop-shadow-2xl bg-floralwhite m-5 lg:m-10 rounded-xl'>
+                    <h1 className="py-5 title text-center">Our Goals</h1>
+                    <div className='flex flex-col xl:flex-row justify-center items-center p-5'>
+                        <img className='w-full xl:w-1/2 h-auto' src={media} alt='goals' />
+                        <ul className='para mp3 xl:p-10 font-extralight list-disc'>
+                            <li>Create a strong, connected, and inclusive community for all students.</li>
+                            <br />
+                            <li>Provide and facilitate a wide range of events/projects intertwined with SEA culture to share the SEA experience with all students at UBCO.</li>
+                            <br />
+                            <li>Educate students in our community about Southeast Asia and all that it has to offer; sharing and teaching about the aspects and perspectives beyond what is often portrayed in the Western world, if at all included.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="border-darkolivegreen border-4 m-5 lg:m-10 drop-shadow-2xl rounded-xl bg-floralwhite text-black">
@@ -76,7 +78,7 @@ function AboutTab() {
 
                         <a target='_blank' href='https://campus.hellorubric.com/?s=7807&merchid=8669' className='group flex justify-center items-center btn-yellow text-2xl m-5'>
                             Buy Merch
-                            <img className='w-8 h-auto opacity-0 -translate-x-3 group-hover:translate-x-2 group-hover:opacity-100 t200e' src={chevron} alt='arrow'></img>
+                            <img className='w-8 h-auto opacity-80 -translate-x-0 group-hover:translate-x-2 group-hover:opacity-100 t200e' src={chevron} alt='arrow'></img>
                         </a>
                     </div>
                 </div>
