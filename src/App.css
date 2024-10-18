@@ -91,10 +91,10 @@
   }
 
   .title {
-    @apply font-thin text-5xl md:text-7xl;
+    @apply font-medium text-5xl md:text-7xl;
   }
 
   .para {
-    @apply md:text-3xl;
+    @apply font-extralight md:text-3xl;
   }
 }

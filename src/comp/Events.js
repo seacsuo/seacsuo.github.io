@@ -10,6 +10,7 @@ import chevron from '../imgs/icons/arrowright.png';
 function Events() {
     const Events = [];
 
+    // defining the addEvents function for ease of use
     const addEvents = (eventImg, eventTitle, isComingSoon, eventDate, link, eventLocation) => {
         Events.push({ eventImg, eventTitle, isComingSoon, eventDate, link, eventLocation });
     }
@@ -20,7 +21,7 @@ function Events() {
 
     return (
         <div >
-            <div id="events" className='py-10'>
+            <div id="events" className='py-16'>
 
             </div>
 
@@ -28,6 +29,8 @@ function Events() {
                 <h1 className="title text-center text-white">
                     Events
                 </h1>
+
+                {/* map through the Events array */}
                 <div className='flex flex-row flex-wrap justify-around items-center'>
                     {Events.map((Events, index) => (
                         <Event
@@ -41,6 +44,8 @@ function Events() {
                         />
                     ))}
                 </div>
+
+                {/* Learn More button */}
                 <div className='flex justify-center items-center my-5'>
                     <a href='/events' className='btn-dsb flex justify-center items-center'>
                         <p>

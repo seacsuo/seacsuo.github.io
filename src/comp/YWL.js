@@ -10,6 +10,7 @@ function YWL() {
 
     const ywlList = [];
 
+    // declare function to add YWL
     const addYWL = (img, name, location, desc) => {
         ywlList.push({ img, name, location, desc });
     }
@@ -27,6 +28,8 @@ function YWL() {
                         SEA in Kelowna
                     </h1>
                 </div>
+
+                {/* YWLList */}
                 <div className='flex justify-center items-center '>
                     {ywlList.map((ywl, index) => (
                         <YWLList
@@ -38,6 +41,8 @@ function YWL() {
                         />
                     ))}
                 </div>
+
+                {/* Learn More Button */}
                 <div className='flex justify-center items-center my-5'>
                     <Link to='/ywl' className='btn-dsb flex justify-center items-center'>
                         <p>

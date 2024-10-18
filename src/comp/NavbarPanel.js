@@ -9,7 +9,7 @@ import logo from '../imgs/seaclogotext.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Define the navigation links and their paths in an array
+// navLinks array
 const navLinks = [
     { to: '/about', text: 'About Us' },
     { to: '/events', text: 'SEAC Events' },
@@ -17,7 +17,7 @@ const navLinks = [
     { to: '/contact', text: 'Contact' },
 ];
 
-
+// footerIcons array
 const footerIcons = [
     { href: 'https://www.instagram.com/seac.suo/?theme=dark', src: instagramLogo, alt: 'instagram icon' },
     { href: 'mailto:seac.suo@gmail.com', src: mailLogo, alt: 'mail icon' },
@@ -36,6 +36,7 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                         <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 translate-x-3 rotate-180 group-hover:translate-x-0 t200e' alt='chevron icon' />
                     </a>
 
+                    {/* make sure the page is refreshed when clicked */}
                     <Link to='/' className='m-5 point fadein80 t200e flex group items-center justify-center'
                         onClick={(e) => {
                             e.preventDefault();
@@ -47,6 +48,7 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                     </Link>
                 </div>
 
+                {/* navLinks */}
                 <ul className='flex flex-col justify-center items-center font-extralight text-center text-3xl md:text-4xl '>
                     {navLinks.map((link, index) => (
                         <li key={index} className='m-5 point'>
@@ -58,6 +60,7 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                     ))}
                 </ul>
 
+                {/* social media icons */}
                 <div className='absolute right-0 bottom-0 m-10'>
                     <ul className='flex'>
                         {footerIcons.map((icon, index) => (
@@ -70,6 +73,8 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                     </ul>
                 </div>
             </div>
+
+            {/* blur panel (when user open navbar panel, it pops up) */}
             <nav>
                 <div id="blur-panel" className={`fixed w-full h-full bg-black t500e  ${isPanelOpen ? 'opacity-75 z-20 ' : ' opacity-0 '}`}></div>
             </nav>

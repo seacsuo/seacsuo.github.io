@@ -1,5 +1,6 @@
 import '../output.css';
 import bgImage from '../imgs/preciousmemoriesvietnam.jpg';
+import { Link } from 'react-router-dom';
 
 
 function HomeScreen() {
@@ -17,9 +18,9 @@ function HomeScreen() {
                     <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     with SEAC!
                 </h1>
-                <a href="#about" className="btn-dsb mt-10 font-thin text-1xl lg:text-4xl">
+                <Link to="/events" className="btn-dsb mt-10 font-thin text-1xl lg:text-4xl">
                     Join now
-                </a>
+                </Link>
             </div>
         </div>
     );

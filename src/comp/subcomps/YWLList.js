@@ -18,7 +18,7 @@ function YWLList({ img, name, location, desc }) {
                     </div>
                 </a>
 
-                <p className='text-xl md:text-2xl'>
+                <p className='para text-xl md:text-2xl'>
                     {desc}
                 </p>
             </div>
