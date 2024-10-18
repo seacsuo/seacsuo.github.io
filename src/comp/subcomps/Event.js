@@ -12,7 +12,7 @@ function Event({ eventImg, eventTitle, isComingSoon, eventDate, eventLink, event
                 <img className='w-full h-full object-cover object-center' src={eventImg} alt='icon' />
             </div>
             <h1 className='my-5 text-white text-5xl text-center'>{eventTitle}</h1>
-            <a href={eventLink} target='_blank' className='point'>
+            <a href={eventLink} className='point'>
                 <p className={`text-white text-xl  ${isComingSoon ? 'btn-yellow' : 'btn-dsb'}`}>
                     {isComingSoon ? 'Coming Soon!' : 'Get Info'}
                 </p>

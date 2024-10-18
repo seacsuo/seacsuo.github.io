@@ -14,8 +14,8 @@ function Events() {
         Events.push({ eventImg, eventTitle, isComingSoon, eventDate, link, eventLocation });
     }
 
-    addEvents(picnic, 'Picnic Collab', true, '15 October 2024', '', 'TBA');
-    addEvents(gamenight, 'Cultural Games Night', true, '15 October 2024', '', 'TBA');
+    addEvents(picnic, 'Picnic Collab', false, '15 October 2024', '', 'TBA');
+    addEvents(gamenight, 'Cultural Games Night', false, '15 October 2024', '', 'TBA');
     addEvents(expo, 'Expo Day', false, '15 September 2024', '', 'Throughout UBCO Campus');
 
     return (
