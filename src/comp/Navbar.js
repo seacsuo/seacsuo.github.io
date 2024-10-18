@@ -28,7 +28,7 @@ function Navbar({ isPanelOpen, togglePanel }) {
             <div className='hidden xl:block'>
                 <ul className="flex text-3xl font-semibold ">
                     <li className="mx-8 nudgeup t200e fadein80">
-                        <Link to="/about" className='point py-3'>About</Link></li>
+                        <Link to="/#about" className='point py-3'>About</Link></li>
                     <li className="mx-8 nudgeup t200e fadein80">
                         <Link to="/events" className='point py-3'>Events</Link></li>
                     <li className="mx-8 nudgeup t200e fadein80">
