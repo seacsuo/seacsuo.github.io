@@ -17,8 +17,8 @@ function AboutTab() {
         <div id='about' className="w-screen relative overflow-hidden ">
             <div id='a' className='py-16'></div>
             <div className="m-5 lg:m-10  bg-darkolivegreen drop-shadow-2xl text-white rounded-xl">
-                <h1 className='py-5 lg:py-10 title text-center'>History of <br />SEAC</h1>
-                <div className='flex flex-col xl:flex-row justify-center items-center p-5 xl:mp5'>
+                <h1 className=' pt-10 title text-center'>History of SEAC</h1>
+                <div className='flex flex-col xl:flex-row justify-center items-center p-5 '>
                     <p className='para pb-5 xl:mp5 font-extralight'>
                         SEAC was founded around a decade ago
                         (we’re digging through the old
