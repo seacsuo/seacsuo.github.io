@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0fd499f0.css",
-    "main.js": "/static/js/main.193e9eb9.js",
+    "main.css": "/static/css/main.22ccfa7b.css",
+    "main.js": "/static/js/main.d70611da.js",
     "static/media/seaclogo.png": "/static/media/seaclogo.300b7c479eea7cbe5b2c.png",
     "static/media/expo.jpg": "/static/media/expo.15ee1ee302e38e7057e7.jpg",
     "static/media/padthai.jpg": "/static/media/padthai.47431077521931e303ca.jpg",
@@ -10,15 +10,16 @@
     "static/media/gamenight.jpg": "/static/media/gamenight.ba08808db34c5c92b299.jpg",
     "static/media/rmlogo.png": "/static/media/rmlogo.f1fb6d5319f1280adec4.png",
     "static/media/seaclogotext.png": "/static/media/seaclogotext.92e39743b37189cb8108.png",
+    "static/media/media90.png": "/static/media/media90.a2fb0244238cb9103696.png",
     "static/media/media.png": "/static/media/media.fcfb3cd6c88e23c9a1a1.png",
     "static/media/linkedinlogo.png": "/static/media/linkedinlogo.e1ae2f8c33267b23f922.png",
     "static/media/navbaricon.png": "/static/media/navbaricon.fe6cb25ce11b921920f8.png",
     "index.html": "/index.html",
-    "main.0fd499f0.css.map": "/static/css/main.0fd499f0.css.map",
-    "main.193e9eb9.js.map": "/static/js/main.193e9eb9.js.map"
+    "main.22ccfa7b.css.map": "/static/css/main.22ccfa7b.css.map",
+    "main.d70611da.js.map": "/static/js/main.d70611da.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fd499f0.css",
-    "static/js/main.193e9eb9.js"
+    "static/css/main.22ccfa7b.css",
+    "static/js/main.d70611da.js"
   ]
 }
