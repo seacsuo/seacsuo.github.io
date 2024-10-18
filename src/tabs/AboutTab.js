@@ -57,7 +57,7 @@ function AboutTab() {
                 </div>
 
                 <div className="border-darkolivegreen border-4 m-5 lg:m-10 drop-shadow-2xl rounded-xl bg-floralwhite text-black">
-                    <h1 className="py-10 title text-center">Merch</h1>
+                    <h1 className="pt-10 title text-center">Merch</h1>
                     <div className='text-left flex flex-col xl:flex-row justify-around items-center mp3 lg:mp5'>
                         <div className='text-center lg:text-left lg:mp5'>
                             <h1 className='title'>SEAC Stickers</h1>
