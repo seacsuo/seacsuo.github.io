@@ -25,7 +25,7 @@ const footerIcons = [
 ];
 
 function NavbarPanel({ isPanelOpen, togglePanel }) {
-    const panel = isPanelOpen ? 'opacity-100 z-30' : 'opacity-0 -z-10';
+    const panel = isPanelOpen ? 'z-30 opacity-100 ' : 'opacity-0 -z-10';
 
     return (
         <div>
