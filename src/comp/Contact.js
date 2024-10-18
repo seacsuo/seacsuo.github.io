@@ -19,7 +19,7 @@ const contactItems = [
     {
         logo: linkedinLogo,
         alt: 'LinkedIn logo',
-        link: 'https://www.linkedin.com/company/southeast-asian-club-seac/',
+        link: 'https://www.linkedin.com/in/southeast-asian-club-seac-980a43331/',
         label: 'Southeast Asian Club (SEAC)',
     },
 ];
