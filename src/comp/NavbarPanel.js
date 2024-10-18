@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 // navLinks array
 const navLinks = [
     { to: '/about#a', text: 'About Us' },
-    { to: '/events', text: 'SEAC Events' },
+    { to: '/events#e', text: 'SEAC Events' },
     { to: '/ywl', text: 'SEA in YWL' },
     { to: '/contact', text: 'Contact' },
 ];

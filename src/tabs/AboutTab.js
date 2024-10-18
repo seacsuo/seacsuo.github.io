@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React, { useState } from 'react'; // Import useState
 import '../output.css';
 import media from '../imgs/media.png';
 import media90 from '../imgs/media90.png';
@@ -14,7 +13,7 @@ function AboutTab() {
     ];
 
     return (
-        <div id='about' className="w-screen relative overflow-hidden ">
+        <div id='about' className="w-screen relative overflow-hidden animate-fadein ">
             <div id='a' className='py-16'></div>
             <div className="m-5 lg:m-10  bg-darkolivegreen drop-shadow-2xl text-white rounded-xl">
                 <h1 className=' pt-10 title text-center'>History of SEAC</h1>

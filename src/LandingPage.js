@@ -6,7 +6,7 @@ import Contact from './comp/Contact';
 
 function LandingPage() {
     return (
-        <div>
+        <div className='animate-fadein'>
             <HomeScreen />
             <About />
             <Events />

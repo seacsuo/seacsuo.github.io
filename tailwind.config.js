@@ -15,6 +15,15 @@ module.exports = {
         rosybrown: '#D49C92',
         darkslateblue: '#073A7F',
       },
+      keyframes: {
+        fadein: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadein: 'fadein 0.5s ease forwards',
+      },
     },
   },
   plugins: [],

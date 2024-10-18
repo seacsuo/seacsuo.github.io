@@ -15,7 +15,7 @@ function About() {
             </div>
 
 
-            <div className='bg-floralwhite text-sienna drop-shadow-2xl mp5'>
+            <div className='bg-floralwhite text-sienna drop-shadow-2xl mp5 '>
                 <h1 className="title text-center">About Us</h1>
 
                 <div className='flex flex-col xl:flex-row justify-center items-center'>
@@ -48,12 +48,12 @@ function About() {
 
                 {/* learn more button */}
                 <div className='flex justify-center items-center my-5'>
-                    <Link to='/about' className='btn-dsb flex justify-center items-center'>
+                    <HashLink to='/about#a' className='btn-dsb flex justify-center items-center'>
                         <p>
                             Learn More
                         </p>
                         <img className='w-7 h-auto ' src={chevron} alt='right arrow' />
-                    </Link>
+                    </HashLink>
                 </div>
 
 

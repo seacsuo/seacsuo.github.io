@@ -15,7 +15,7 @@ function Navbar({ isPanelOpen, togglePanel }) {
     // Navigation Links Array
     const navLinks = [
         { to: "/about#a", label: "About" },
-        { to: "/events", label: "Events" },
+        { to: "/events#e", label: "Events" },
         { to: "/contact", label: "Contact" },
     ];
 

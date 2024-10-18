@@ -3,9 +3,6 @@
 
 import '../output.css';
 import rmlogo from '../imgs/rmlogo.png';
-import instagramLogo from '../imgs/icons/instagramlogo.png';
-import mailLogo from '../imgs/icons/maillogo.png';
-import linkedinLogo from '../imgs/icons/linkedinlogo.png';
 
 function Footer() {
     return (
