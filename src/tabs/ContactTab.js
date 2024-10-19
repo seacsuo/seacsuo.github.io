@@ -48,25 +48,32 @@ function ContactTab() {
 
     const contactLink = "https://docs.google.com/forms/d/e/1FAIpQLSfx-8wQ815Jd9lQ2_Jh4epj2dqGC5FqKKqzvrwI_7PJ-i-ZLA/viewform?embedded=true";
     return (
-        <div id='contact' className="w-screen relative overflow-hidden text-sienna mb-10">
+        <div id='contact' className="w-screen relative overflow-hidden bg-rosybrown text-floralwhite mb-10">
             <div id="events" className='py-16'></div>
             <div className="">
-                <h1 className="title text-center py-10">
-                    Contact Us
-                </h1>
+
 
                 <div className='flex items-center flex-col justify-center '>
-                    <div className="rounded-xl bg-sienna flex flex-col w-screen p-5 items-center text-2xl lg:text-3xl text-white font-thin">
+                    <h1 className="title text-center py-10">
+                        Contact Us
+                    </h1>
+                    <div className="rounded-xl  flex flex-col w-screen px-5 items-start lg:items-center text-2xl lg:text-3xl  font-thin bg-transparent">
+
                         {contactItems.map(addContactItem)}
                     </div>
 
-                    <h1 className='title m-10 text-center'>
+                    <h1 className='title m-10 mb-16 text-center'>
                         or
                     </h1>
 
-                    <div className="flex flex-col bg-rosybrown p-5 rounded-xl w-screen justify-center items-center">
+                    <div className="flex flex-col bg-sienna text-floralwhite py-5 w-screen justify-center items-center">
                         <h1 className='title text-center py-10'> Fill in a form </h1>
-                        <iframe src={contactLink} className='w-screen h-screen' >
+                        <iframe
+                            src={contactLink}
+                            className='w-full pb-10 lg:w-3/4'
+                            height="1150"
+                        >
+
                             Loading…
                         </iframe>
                     </div>
