@@ -124,6 +124,8 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
                         </p>
                         <img className='w-7 h-auto t200e translate-x-0 group-hover:translate-x-2' src={chevron} alt='right arrow' />
                     </button>
+                    {/* TODO: Get the google forms link, make iframe and then if user click register, make it 
+                    pop up */}
                     <a href={regLink} className={`group flex justify-between items-center text-lg btn-rosy `}>
                         <p>
                             Register
