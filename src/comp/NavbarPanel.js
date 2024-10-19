@@ -44,7 +44,7 @@ function NavbarPanel({ isPanelOpen, togglePanel }) {
                         }}
                     >
                         <img src={chevron} className='w-8 h-auto  opacity-0 group-hover:opacity-100 -translate-x-3  group-hover:translate-x-0 t200e' alt='chevron icon' />
-                        <img className='h-12 md:h-20 w-auto ' src={logo} alt='seac logo' />
+                        <img className='h-12 md:h-20 w-auto mr-10' src={logo} alt='seac logo' />
                     </Link>
                 </div>
 
