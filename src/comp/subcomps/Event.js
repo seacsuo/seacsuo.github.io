@@ -1,6 +1,6 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from 'react';
 import '../../output.css';
+import RegistrationForm from './RegistrationForm';
 import chevron from '../../imgs/icons/arrowright.png';
 import calendarLogo from '../../imgs/icons/calendarlogo.png';
 import locationLogo from '../../imgs/icons/locationlogo.png';
@@ -30,6 +30,9 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
     // Determine if the event end time has passed
     const hasPassed = eventEndTime < today;
 
+    // State to toggle the registration form
+    const [isRegisterVisible, setIsRegisterVisible] = useState(false);
+
     // Function to generate ICS content
     const generateICS = () => {
         const icsContent = `BEGIN:VCALENDAR
@@ -57,8 +60,13 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
         URL.revokeObjectURL(url);
     };
 
+    // Toggle the registration form visibility
+    const toggleRegisterForm = () => {
+        setIsRegisterVisible(!isRegisterVisible);
+    };
+
     return (
-        <div className={`${isVertical ? 'w-2/6' : 'w-full'} flex justify-center t200e ${hasPassed ? 'fadein60' : ''}`}>
+        <div className={`${isVertical ? 'w-2/6' : 'w-full'} flex flex-wrap justify-center t200e ${hasPassed ? 'fadein60' : ''}`}>
             <div className={`${isVertical ? 'flex' : 'hidden'} flex-col justify-center items-center m-5`}>
                 <div className='w-72 h-96 overflow-hidden'>
                     <img className='w-full h-full object-cover object-center' src={eventImg} alt='icon' />
@@ -93,19 +101,19 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
                     </div>
                     <div className='flex flex-col mx-10 w-full lg:w-8/12 text-center lg:text-left'>
                         <h1 className='my-5 text-white text-5xl'>{eventTitle}</h1>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm flex my-2 m-auto w-full lg:m-1 justify-center lg:justify-start items-center`}>
                             <img className='mx-2 w-8 h-auto' src={calendarLogo} alt='calendar icon' />
                             <p className='text-white text-xl text-center lg:text-left'>
                                 {eventDate}
                             </p>
                         </div>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
                             <img className='mx-2 w-8 h-auto' src={timeLogo} alt='time icon' />
                             <p className='text-white text-xl text-center lg:text-left'>
                                 {eventTime}
                             </p>
                         </div>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
                             <img className='mx-2 w-8 h-auto' src={locationLogo} alt='location icon' />
                             <p className='text-white text-xl text-center lg:text-left'>
                                 {eventLocation}
@@ -117,23 +125,29 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
                         </p>
                     </div>
                 </div>
-                <div className='flex flex-col h-full justify-between text-center w-full lg:w-2/4 items-center '>
-                    <button onClick={generateICS} className={`group flex justify-between items-center text-lg my-5 btn-rosy`}>
-                        <p>
-                            Add to calendar
-                        </p>
-                        <img className='w-7 h-auto t200e translate-x-0 group-hover:translate-x-2' src={chevron} alt='right arrow' />
-                    </button>
-                    {/* TODO: Get the google forms link, make iframe and then if user click register, make it 
-                    pop up */}
-                    <a href={regLink} className={`group flex justify-between items-center text-lg btn-rosy `}>
-                        <p>
-                            Register
-                        </p>
-                        <img className='w-7 h-auto t200e translate-x-0 group-hover:translate-x-2' src={chevron} alt='right arrow' />
-                    </a>
-                </div>
+                {!hasPassed &&
+                    (<div className='flex flex-col h-full justify-between text-center w-full lg:w-2/4 items-center '>
+                        <button onClick={generateICS} className={`group flex justify-between items-center text-lg my-5 btn-rosy`}>
+                            <p>
+                                Add to calendar
+                            </p>
+                            <img className='w-7 h-auto t200e translate-x-0 group-hover:translate-x-2' src={chevron} alt='right arrow' />
+                        </button>
+
+                        {/* Register button with click to toggle the form */}
+                        <button onClick={toggleRegisterForm} className={`group flex justify-between items-center text-lg btn-rosy my-5`}>
+                            <p>
+                                Register
+                            </p>
+                            <img className={`${isRegisterVisible ? 'rotate-90' : 'rotate-0'} w-7 h-auto t200e translate-x-0 group-hover:translate-x-2`} src={chevron} alt='right arrow' />
+                        </button>
+                    </div>)}
             </div>
+
+            <div className={`${isRegisterVisible ? 'block animate-fadein' : 'hidden'} w-full m-10 flex justify-center`}>
+                <RegistrationForm regLink={regLink} />
+            </div>
+
         </div>
     );
 }

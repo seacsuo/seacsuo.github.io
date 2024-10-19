@@ -9,7 +9,7 @@ function LandingPage() {
         <div className='animate-fadein'>
             <HomeScreen />
             <About />
-            <Events />
+            <Events isOnLanding={true} />
             <YWL />
             <Contact />
         </div>
