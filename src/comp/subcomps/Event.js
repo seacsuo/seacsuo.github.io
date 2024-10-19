@@ -6,7 +6,7 @@ import calendarLogo from '../../imgs/icons/calendarlogo.png';
 import locationLogo from '../../imgs/icons/locationlogo.png';
 import timeLogo from '../../imgs/icons/timelogo.png';
 
-function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVertical, eventDescription, calendarDate, regLink }) {
+function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVertical, eventDescription, regLink }) {
     // Convert eventDate from string to Date object
     const eventDateObj = new Date(eventDate);
 

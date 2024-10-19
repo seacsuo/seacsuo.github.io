@@ -19,16 +19,23 @@ function Events() {
     }
 
     // Time must be in 12-hour format, using this format: 'AA:AA PM - BB:BB PM'
+    // we can only accept google forms link
+    // like this 
+    // https://docs.google.com/forms/d/e/1FAIpQLSd9KlGaTK7IgVPkEcc9g_EnaOvSxQAbjXaUxoXtEIQfbcC-kA/viewform
+    // then it will convert to 
+    // https://docs.google.com/forms/d/e/1FAIpQLSd9KlGaTK7IgVPkEcc9g_EnaOvSxQAbjXaUxoXtEIQfbcC-kA/viewform?embedded=true
+
     addEvents(
         media,
         'New Event',
-        '20 Oct 2024',
-        '12:00 PM - 5:30 PM',
+        '10 December 2024',
+        '12:00 PM - 2:30 PM',
         'TBA',
         true,
-        'Join us for a new event! More details coming soon.',
-        'https://www.eventbrite.ca/e/new-event-tickets-1234567890'
-    )
+        'New Event Description',
+        ''
+    );
+
 
     addEvents(
         picnic,
@@ -38,17 +45,18 @@ function Events() {
         'TBA',
         true,
         'Join us for a picnic with a cultural twist! We will be serving food from different cultures and playing games from around the world. This event is a great way to meet new people and learn about different cultures.',
-        'https://www.eventbrite.ca/e/picnic-collab-tickets-1234567890'
+        ''
     );
+
     addEvents(
         gamenight,
         'Cultural Games Night',
         '15 October 2024',
-        '12:00 PM - 2:30 PM',
+        '6:00 PM - 8:30 PM',
         'TBA',
         true,
         'Join us for a night of fun and games! We will be playing games from different cultures and learning about the history behind them. This event is a great way to meet new people and have a good time.',
-        'https://www.eventbrite.ca/e/games-night-tickets-1234567891'
+        'https://docs.google.com/forms/d/e/1FAIpQLSd9KlGaTK7IgVPkEcc9g_EnaOvSxQAbjXaUxoXtEIQfbcC-kA/viewform'
     );
 
     return (
