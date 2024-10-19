@@ -16,7 +16,7 @@ function Navbar({ isPanelOpen, togglePanel }) {
     const navLinks = [
         { to: "/about#a", label: "About" },
         { to: "/events#e", label: "Events" },
-        { to: "/contact", label: "Contact" },
+        { to: "/contact#c", label: "Contact" },
     ];
 
     // Social Media Icons Array

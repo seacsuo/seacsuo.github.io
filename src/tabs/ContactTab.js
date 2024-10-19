@@ -48,7 +48,7 @@ function ContactTab() {
 
     const contactLink = "https://docs.google.com/forms/d/e/1FAIpQLSfx-8wQ815Jd9lQ2_Jh4epj2dqGC5FqKKqzvrwI_7PJ-i-ZLA/viewform?embedded=true";
     return (
-        <div id='contact' className="w-screen relative overflow-hidden bg-rosybrown text-floralwhite mb-10">
+        <div id='c' className="animate-fadein w-screen relative overflow-hidden bg-rosybrown text-floralwhite mb-10">
             <div id="events" className='py-16'></div>
             <div className="">
 

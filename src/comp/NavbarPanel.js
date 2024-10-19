@@ -14,7 +14,7 @@ const navLinks = [
     { to: '/about#a', text: 'About Us' },
     { to: '/events#e', text: 'SEAC Events' },
     { to: '/ywl', text: 'SEA in YWL' },
-    { to: '/contact', text: 'Contact' },
+    { to: '/contact#c', text: 'Contact' },
 ];
 
 // footerIcons array
