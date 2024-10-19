@@ -830,12 +830,29 @@ video {
   margin-bottom: 5rem;
 }
 
+.my-96 {
+  margin-top: 24rem;
+  margin-bottom: 24rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mb-96 {
+  margin-bottom: 24rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -880,6 +897,30 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-max {
+  height: max-content;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-svh {
+  height: 100svh;
+}
+
+.h-dvh {
+  height: 100dvh;
+}
+
+.h-3\/4 {
+  height: 75%;
 }
 
 .min-h-screen {
@@ -950,12 +991,36 @@ video {
   width: 100vw;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-screen-md {
   max-width: 768px;
 }
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
 }
 
 .-translate-x-0 {
@@ -1068,6 +1133,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-l-xl {
   border-top-left-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
@@ -1157,6 +1226,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-96 {
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1171,6 +1250,10 @@ video {
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pb-96 {
+  padding-bottom: 24rem;
 }
 
 .text-left {

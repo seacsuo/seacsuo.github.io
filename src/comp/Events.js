@@ -27,7 +27,6 @@ function Events({ isOnLanding }) {
     );
 
 
-
     addEvents(
         picnic,
         'Picnic Collab',
