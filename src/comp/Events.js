@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import '../output.css';
 import media from '../imgs/media.png';
 import expo from '../imgs/expo.jpg';
@@ -16,11 +15,6 @@ function Events({ isOnLanding }) {
         Events.push({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVertical, eventDescription, regLink });
     }
 
-    // Time must be in 12-hour format, using this format: 'AA:AA PM - BB:BB PM'
-    // we can only accept google forms link
-    // then it will convert to 
-    // https://docs.google.com/forms/d/e/1FAIpQLSd9KlGaTK7IgVPkEcc9g_EnaOvSxQAbjXaUxoXtEIQfbcC-kA/viewform?embedded=true
-
     addEvents(
         media,
         'New Event',
@@ -31,6 +25,8 @@ function Events({ isOnLanding }) {
         'New Event Description',
         'https://docs.google.com/forms/d/e/1FAIpQLSdgSIifYxshVrfugky9Ek7c-gDzubFDf_KyrWhwZMSs8iJvdg/viewform'
     );
+
+
 
     addEvents(
         picnic,
@@ -54,6 +50,17 @@ function Events({ isOnLanding }) {
         ''
     );
 
+    addEvents(
+        expo,
+        'Cultural Expo',
+        '15 October 2024',
+        '12:00 PM - 2:30 PM',
+        'TBA',
+        isOnLanding,
+        'Join us for a cultural expo featuring food, music, and dance from different cultures around the world. This event is a great way to learn about different cultures and meet new people.',
+        ''
+    );
+
     return (
         <div>
             {isOnLanding && (
@@ -63,9 +70,9 @@ function Events({ isOnLanding }) {
                     <div className="h-auto relative overflow-hidden bg-sienna p-5 drop-shadow-2xl">
                         <h1 className="title text-center text-white">Events</h1>
 
-                        {/* Map through the Events array */}
+                        {/* Map through the Events array and slice to limit to first 3 */}
                         <div className='flex flex-col lg:flex-row flex-wrap justify-center items-center'>
-                            {Events.map((event, index) => (
+                            {Events.slice(0, 3).map((event, index) => (
                                 <Event
                                     key={index}
                                     eventImg={event.eventImg}
@@ -92,12 +99,13 @@ function Events({ isOnLanding }) {
 
             {/* Conditionally render this second section */}
             {!isOnLanding && (
-                <div id='e' className='py-10 w-screen relative animate-fadein overflow-hidden bg-sienna text-white drop-shadow-2xl'>
+                <div id='e' className='py-10 pb-20 w-screen relative animate-fadein overflow-hidden bg-sienna text-white drop-shadow-2xl'>
                     <div className='my-20'></div>
                     <div>
                         <h1 className='p-10 title text-center'>Events</h1>
                     </div>
 
+                    {/* Map through the entire Events array */}
                     <div className='flex flex-col justify-center items-center'>
                         {Events.map((event, index) => (
                             <Event
