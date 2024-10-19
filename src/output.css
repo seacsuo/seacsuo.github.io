@@ -670,8 +670,8 @@ video {
 }
 
 .title {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 3.75rem;
+  line-height: 1;
   font-weight: 500;
 }
 
@@ -823,6 +823,11 @@ video {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .ml-3 {
@@ -1005,20 +1010,6 @@ video {
 
 .animate-fadein {
   animation: fadein 0.5s ease forwards;
-}
-
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.animate-fadeout {
-  animation: fadeout 0.5s ease forwards;
 }
 
 .list-disc {
@@ -1295,10 +1286,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.delay-200 {
-  transition-delay: 200ms;
-}
-
 .group:hover .group-hover\:zoomin:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -1459,6 +1446,10 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .lg\:items-start {

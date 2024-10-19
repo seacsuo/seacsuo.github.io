@@ -95,7 +95,7 @@
   }
 
   .title {
-    @apply font-medium text-4xl md:text-7xl;
+    @apply font-medium text-6xl md:text-7xl;
   }
 
   .para {

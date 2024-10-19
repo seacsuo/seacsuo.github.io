@@ -64,7 +64,7 @@ function Events({ isOnLanding }) {
                         <h1 className="title text-center text-white">Events</h1>
 
                         {/* Map through the Events array */}
-                        <div className='flex flex-row flex-wrap justify-center items-center'>
+                        <div className='flex flex-col lg:flex-row flex-wrap justify-center items-center'>
                             {Events.map((event, index) => (
                                 <Event
                                     key={index}
@@ -93,7 +93,7 @@ function Events({ isOnLanding }) {
             {/* Conditionally render this second section */}
             {!isOnLanding && (
                 <div id='e' className='py-10 w-screen relative animate-fadein overflow-hidden bg-sienna text-white drop-shadow-2xl'>
-                    <div className='my-32'></div>
+                    <div className='my-20'></div>
                     <div>
                         <h1 className='p-10 title text-center'>Events</h1>
                     </div>
