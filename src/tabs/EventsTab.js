@@ -18,7 +18,7 @@ function EventsTab() {
     addEvents(
         media,
         'New Event',
-        '18 Oct 2024',
+        '19 Oct 2024',
         '12:00 PM - 5:30 PM',
         'TBA',
         false,
