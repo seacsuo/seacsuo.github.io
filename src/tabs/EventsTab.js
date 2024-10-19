@@ -14,7 +14,7 @@ function EventsTab() {
         Events.push({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVertical, eventDescription, regLink });
     }
 
-    // Add events using month names
+    // Time must be in 12-hour format, using this format: 'AA:AA PM - BB:BB PM'
     addEvents(
         media,
         'New Event',
