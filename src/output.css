@@ -1448,6 +1448,10 @@ video {
     width: 66.666667%;
   }
 
+  .lg\:w-12 {
+    width: 3rem;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1475,6 +1479,11 @@ video {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 

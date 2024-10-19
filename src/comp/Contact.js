@@ -30,7 +30,7 @@ const addContactItem = ({ logo, alt, link, label }) => (
         target="_blank"
         rel="noopener noreferrer"
         href={link}
-        className="fadein80 t200e flex justify-center items-center m-5"
+        className="fadein80 t200e flex justify-center items-center my-5"
     >
         <img className="w-12 h-auto" src={logo} alt={alt} />
         <h1 className="mx-5">{label}</h1>
@@ -41,7 +41,7 @@ const Contact = () => {
     return (
         <div id="contact" className="w-screen relative overflow-hidden bg-peru drop-shadow-2xl">
             <h1 className="title text-white mp5">Contact us!</h1>
-            <div className="flex flex-wrap justify-start lg:justify-around items-center m-5 text-3xl text-white font-thin">
+            <div className="flex flex-wrap justify-start lg:justify-around items-center m-5 text-2xl lg:text-3xl text-white font-thin">
                 {contactItems.map(addContactItem)}
             </div>
         </div>
