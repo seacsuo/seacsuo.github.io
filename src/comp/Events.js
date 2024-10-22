@@ -44,19 +44,8 @@ function Events({ isOnLanding }) {
 
 
     addEvents(
-        picnic,
-        'Picnic Collab',
-        '15 October 2024',
-        '12:00 PM - 2:30 PM',
-        'TBA',
-        isOnLanding,
-        'Join us for a picnic with a cultural twist! We will be serving food from different cultures and playing games from around the world. This event is a great way to meet new people and learn about different cultures.',
-        'https://docs.google.com/forms/d/e/1FAIpQLSfHWGB7u6tJKWbCdlfPbupTkx7-COr5dgMjFiQPZoo0fQdylg/viewform'
-    );
-
-    addEvents(
         expo,
-        'Cultural Expo',
+        'Expo',
         '15 October 2024',
         '12:00 PM - 2:30 PM',
         'TBA',
