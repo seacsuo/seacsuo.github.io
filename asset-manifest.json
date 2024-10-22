@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb6ca0fd.css",
-    "main.js": "/static/js/main.9f9629c5.js",
+    "main.css": "/static/css/main.8a91694c.css",
+    "main.js": "/static/js/main.0353d17d.js",
     "static/media/seaclogo.png": "/static/media/seaclogo.300b7c479eea7cbe5b2c.png",
     "static/media/expo.jpg": "/static/media/expo.15ee1ee302e38e7057e7.jpg",
     "static/media/padthai.jpg": "/static/media/padthai.47431077521931e303ca.jpg",
@@ -9,17 +9,18 @@
     "static/media/picnic.jpg": "/static/media/picnic.75bb5247785a5ca04daf.jpg",
     "static/media/gamenight.jpg": "/static/media/gamenight.ba08808db34c5c92b299.jpg",
     "static/media/rmlogo.png": "/static/media/rmlogo.f1fb6d5319f1280adec4.png",
+    "static/media/batik.jpg": "/static/media/batik.8a514205813cffe13737.jpg",
     "static/media/seaclogotext.png": "/static/media/seaclogotext.92e39743b37189cb8108.png",
     "static/media/media90.png": "/static/media/media90.a2fb0244238cb9103696.png",
     "static/media/media.png": "/static/media/media.fcfb3cd6c88e23c9a1a1.png",
     "static/media/linkedinlogo.png": "/static/media/linkedinlogo.e1ae2f8c33267b23f922.png",
     "static/media/navbaricon.png": "/static/media/navbaricon.fe6cb25ce11b921920f8.png",
     "index.html": "/index.html",
-    "main.cb6ca0fd.css.map": "/static/css/main.cb6ca0fd.css.map",
-    "main.9f9629c5.js.map": "/static/js/main.9f9629c5.js.map"
+    "main.8a91694c.css.map": "/static/css/main.8a91694c.css.map",
+    "main.0353d17d.js.map": "/static/js/main.0353d17d.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb6ca0fd.css",
-    "static/js/main.9f9629c5.js"
+    "static/css/main.8a91694c.css",
+    "static/js/main.0353d17d.js"
   ]
 }
