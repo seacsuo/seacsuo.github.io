@@ -28,7 +28,7 @@ function Events({ isOnLanding }) {
         'TBA',
         isOnLanding,
         'Create your own batik-inspired tote bag! Learn the art of batik while designing a personalized tote just for you!',
-        ''
+        'https://docs.google.com/forms/d/e/1FAIpQLSfHWGB7u6tJKWbCdlfPbupTkx7-COr5dgMjFiQPZoo0fQdylg/viewform'
     );
 
     addEvents(
@@ -51,7 +51,7 @@ function Events({ isOnLanding }) {
         'TBA',
         isOnLanding,
         'Join us for a picnic with a cultural twist! We will be serving food from different cultures and playing games from around the world. This event is a great way to meet new people and learn about different cultures.',
-        ''
+        'https://docs.google.com/forms/d/e/1FAIpQLSfHWGB7u6tJKWbCdlfPbupTkx7-COr5dgMjFiQPZoo0fQdylg/viewform'
     );
 
     addEvents(
@@ -62,14 +62,14 @@ function Events({ isOnLanding }) {
         'TBA',
         isOnLanding,
         'Join us for a cultural expo featuring food, music, and dance from different cultures around the world. This event is a great way to learn about different cultures and meet new people.',
-        ''
+        'https://docs.google.com/forms/d/e/1FAIpQLSfHWGB7u6tJKWbCdlfPbupTkx7-COr5dgMjFiQPZoo0fQdylg/viewform'
     );
 
     return (
         <div>
             {isOnLanding && (
                 <div>
-                    <div id="events" className='py-16'></div>
+                    <div id="events" className='py-10'></div>
 
                     <div className="h-auto relative overflow-hidden bg-sienna p-5 drop-shadow-2xl">
                         <h1 className="title text-center text-white">Events</h1>

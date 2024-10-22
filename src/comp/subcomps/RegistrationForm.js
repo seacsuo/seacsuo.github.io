@@ -3,7 +3,7 @@
 const RegistrationForm = ({ regLink }) => {
     return (
         <div className="bg-rosybrown  py-10">
-            <h1 className='title text-center '> Fill in the form </h1>
+            <h1 className='title text-center '> Please fill in this form </h1>
             <iframe className="w-screen min-h-screen m-auto mt-10"
                 src={regLink + '?embedded=true'}
                 frameborder="0">

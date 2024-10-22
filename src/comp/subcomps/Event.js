@@ -10,12 +10,23 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
     // Convert eventDate from string to Date object
     const eventDateObj = new Date(eventDate);
 
-    // Get today's date and time
-    const today = new Date();
 
     let eventStartTime, eventEndTime;
     let hasPassed = false;
 
+    // Get today's date
+    const today = new Date();
+
+    // Get the start of the week (Sunday) and end of the week (Saturday)
+    const startOfWeek = new Date(today);
+    startOfWeek.setDate(today.getDate() - today.getDay()); // Sets to the previous Sunday
+    startOfWeek.setHours(0, 0, 0, 0); // Start of the day
+
+    const endOfWeek = new Date(today);
+    endOfWeek.setDate(today.getDate() + (6 - today.getDay())); // Sets to the next Saturday
+    endOfWeek.setHours(23, 59, 59, 999); // End of the day
+
+    let eventTip = "Coming up";
 
     try {
         // Parse the eventTime to get the start and end times
@@ -34,12 +45,28 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
 
         // Determine if the event end time has passed
         hasPassed = eventEndTime < today;
+
+        if (eventStartTime >= startOfWeek && eventStartTime <= endOfWeek) {
+            eventTip = "This week";
+        }
+        if (hasPassed) {
+            eventTip = "Passed";
+        }
+        if (eventStartTime.toDateString() === today.toDateString() && hasPassed === false) {
+            eventTip = "Today";
+        }
+        if (eventStartTime > today) {
+            eventTip = "Coming up";
+        }
+
     } catch (error) {
         console.error('Unexpected eventTime format:', error);
         // Fallback to original eventTime string
         eventStartTime = eventEndTime = null;
         hasPassed = false;
     }
+
+
 
     // State to toggle the registration form
     const [isRegisterVisible, setIsRegisterVisible] = useState(false);
@@ -82,25 +109,25 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
             <div className={`${isVertical ? 'flex' : 'hidden'} flex-col justify-center items-center m-5`}>
                 <div className='relative w-72 h-96 overflow-hidden'>
                     <img className='w-full h-full object-cover object-center' src={eventImg} alt='icon' />
-                    <div className={`${hasPassed ? "fact-dsb" : "fact-yellow"} absolute top-2 right-2 px-3 py-1 text-white`}>
-                        {hasPassed ? "Passed" : "Coming up"}
+                    <div className={`${hasPassed ? "fact-grey" : "fact-yellow"} absolute top-2 right-2 px-3 py-1 text-white`}>
+                        {eventTip}
                     </div>
                 </div>
 
                 <h1 className='my-5 text-white text-5xl text-center font-light'>{eventTitle}</h1>
-                <div className={`fact-dsb max-w-xs  flex justify-center lg:justify-start items-center`}>
-                    <img className='w-8 h-auto' src={calendarLogo} alt='calendar icon' />
+                <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-xs  flex justify-center lg:justify-start items-center`}>
+                    <img className='mx-2 w-8 h-auto' src={calendarLogo} alt='calendar icon' />
                     <p className='mx-2  text-white text-xl text-center lg:text-left'>
                         {eventDate}
                     </p>
                 </div>
-                <div className={`fact-dsb max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
                     <img className='mx-2 w-8 h-auto' src={timeLogo} alt='time icon' />
                     <p className='mx-2 text-white text-xl text-center lg:text-left'>
                         {eventTime}
                     </p>
                 </div>
-                <div className={`fact-dsb max-w-sm  flex justify-center lg:justify-start items-center`}>
+                <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-sm  flex justify-center lg:justify-start items-center`}>
                     <img className='mx-2 w-8 h-auto' src={locationLogo} alt='location icon' />
                     <p className='mx-2 text-white text-xl text-center lg:text-left'>
                         {eventLocation}
@@ -116,27 +143,26 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
 
                     <div className='relative w-72 h-96 overflow-hidden'>
                         <img className='w-full h-full object-cover object-center' src={eventImg} alt='icon' />
-                        <div className={`${hasPassed ? "fact-dsb" : "fact-yellow"} absolute top-2 right-2 px-3 py-1 text-white`}>
-                            {hasPassed ? "Passed" : "Coming up"}
+                        <div className={`${hasPassed ? "fact-grey" : "fact-yellow"} absolute top-2 right-2 px-3 py-1 text-white`}>
+                            {eventTip}
                         </div>
                     </div>
 
-
                     <div className='flex flex-col mx-10 w-full lg:w-8/12 text-center lg:text-left font-light'>
                         <h1 className='my-5 text-white text-5xl'>{eventTitle}</h1>
-                        <div className={`fact-dsb max-w-xs flex  m-auto w-full lg:m-1 justify-center lg:justify-start items-center`}>
+                        <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-xs flex  m-auto w-full lg:m-1 justify-center lg:justify-start items-center`}>
                             <img className='w-6  h-auto' src={calendarLogo} alt='calendar icon' />
                             <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventDate}
                             </p>
                         </div>
-                        <div className={`fact-dsb max-w-xs my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
+                        <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-xs my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
                             <img className='w-6 h-auto' src={timeLogo} alt='time icon' />
                             <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventTime}
                             </p>
                         </div>
-                        <div className={`fact-dsb max-w-xs  m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
+                        <div className={`${hasPassed ? "fact-grey" : "fact-dsb"} max-w-xs  m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
                             <img className='w-6 h-auto' src={locationLogo} alt='location icon' />
                             <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventLocation}

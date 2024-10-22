@@ -39,10 +39,14 @@ const addContactItem = ({ logo, alt, link, label }) => (
 
 const Contact = () => {
     return (
-        <div id="contact" className="w-screen relative overflow-hidden bg-peru drop-shadow-2xl">
-            <h1 className="title text-white mp5">Contact us!</h1>
-            <div className="flex flex-wrap justify-start lg:justify-around items-center m-5 text-2xl lg:text-3xl text-white font-thin">
-                {contactItems.map(addContactItem)}
+        <div>
+            <div id="events" className='py-10'></div>
+            <div id="contact" className="w-screen relative overflow-hidden bg-peru drop-shadow-2xl">
+
+                <h1 className="title text-white mp5">Contact us!</h1>
+                <div className="flex flex-wrap justify-start lg:justify-around items-center m-5 text-2xl lg:text-3xl text-white font-thin">
+                    {contactItems.map(addContactItem)}
+                </div>
             </div>
         </div>
     );
