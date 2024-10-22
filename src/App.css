@@ -82,6 +82,13 @@
     @apply px-6 py-3 bg-yellow-500 text-slate-800 font-bold  rounded-xl hover:text-white hover:bg-yellow-700 t200e;
   }
 
+  .fact-dsb {
+    @apply px-4 py-2 bg-darkslateblue text-white font-bold rounded-full hover:bg-slate-800 t200e;
+  }
+  .fact-yellow {
+    @apply px-4 py-2 bg-yellow-500 text-slate-800 font-bold  rounded-full hover:text-white hover:bg-yellow-700 t200e;
+  }
+
   .fadein80 {
     @apply opacity-80 hover:opacity-100;
   }

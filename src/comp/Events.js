@@ -1,11 +1,14 @@
-import '../output.css';
-import media from '../imgs/media.png';
-import expo from '../imgs/expo.jpg';
-import Event from './subcomps/Event';
-import gamenight from '../imgs/gamenight.jpg';
-import picnic from '../imgs/picnic.jpg';
-import chevron from '../imgs/icons/arrowright.png';
+
 import { HashLink } from 'react-router-hash-link';
+import chevron from '../imgs/icons/arrowright.png';
+import media from '../imgs/eventimgs/media.png';
+import expo from '../imgs/eventimgs/expo.jpg';
+import Event from './subcomps/Event';
+import gamenight from '../imgs/eventimgs/gamenight.jpg';
+import picnic from '../imgs/eventimgs/picnic.jpg';
+import batik from '../imgs/eventimgs/batik.jpg';
+
+
 
 function Events({ isOnLanding }) {
 
@@ -15,15 +18,28 @@ function Events({ isOnLanding }) {
         Events.push({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVertical, eventDescription, regLink });
     }
 
+
+
     addEvents(
-        media,
-        'New Event',
-        '10 December 2024',
-        '12:00 PM - 2:30 PM',
+        batik,
+        'DIY Batik-inspired',
+        '25 November 2024',
+        'TBA',
         'TBA',
         isOnLanding,
-        'New Event Description',
-        'https://docs.google.com/forms/d/e/1FAIpQLSdgSIifYxshVrfugky9Ek7c-gDzubFDf_KyrWhwZMSs8iJvdg/viewform'
+        'Create your own batik-inspired tote bag! Learn the art of batik while designing a personalized tote just for you!',
+        ''
+    );
+
+    addEvents(
+        gamenight,
+        'Cultural Games Night',
+        '25 October 2024',
+        '5:30 PM - 8:30 PM',
+        'EME 0252',
+        isOnLanding,
+        'Come play, snack, and have fun! Enjoy a variety of Asian games with your friends, meet new people, and snack your way through the night!',
+        ''
     );
 
 
@@ -35,17 +51,6 @@ function Events({ isOnLanding }) {
         'TBA',
         isOnLanding,
         'Join us for a picnic with a cultural twist! We will be serving food from different cultures and playing games from around the world. This event is a great way to meet new people and learn about different cultures.',
-        ''
-    );
-
-    addEvents(
-        gamenight,
-        'Cultural Games Night',
-        '15 October 2024',
-        '6:00 PM - 8:30 PM',
-        'TBA',
-        isOnLanding,
-        'Join us for a night of fun and games! We will be playing games from different cultures and learning about the history behind them. This event is a great way to meet new people and have a good time.',
         ''
     );
 

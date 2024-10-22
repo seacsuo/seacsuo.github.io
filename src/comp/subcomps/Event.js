@@ -13,22 +13,33 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
     // Get today's date and time
     const today = new Date();
 
-    // Parse the eventTime to get the end time
-    const [startTime, endTime] = eventTime.split(' - ');
-    const [startHour, startMinute, startPeriod] = startTime.split(/[:\s]/);
-    const [endHour, endMinute, endPeriod] = endTime.split(/[:\s]/);
+    let eventStartTime, eventEndTime;
+    let hasPassed = false;
 
-    // Create a date object for the event's start and end time
-    const eventStartTime = new Date(eventDateObj);
-    eventStartTime.setHours((startPeriod === 'PM' && startHour !== '12') ? +startHour + 12 : +startHour);
-    eventStartTime.setMinutes(+startMinute);
 
-    const eventEndTime = new Date(eventDateObj);
-    eventEndTime.setHours((endPeriod === 'PM' && endHour !== '12') ? +endHour + 12 : +endHour);
-    eventEndTime.setMinutes(+endMinute);
+    try {
+        // Parse the eventTime to get the start and end times
+        const [startTime, endTime] = eventTime.split(' - ');
+        const [startHour, startMinute, startPeriod] = startTime.split(/[:\s]/);
+        const [endHour, endMinute, endPeriod] = endTime.split(/[:\s]/);
 
-    // Determine if the event end time has passed
-    const hasPassed = eventEndTime < today;
+        // Create a date object for the event's start and end time
+        eventStartTime = new Date(eventDateObj);
+        eventStartTime.setHours((startPeriod === 'PM' && startHour !== '12') ? +startHour + 12 : +startHour);
+        eventStartTime.setMinutes(+startMinute);
+
+        eventEndTime = new Date(eventDateObj);
+        eventEndTime.setHours((endPeriod === 'PM' && endHour !== '12') ? +endHour + 12 : +endHour);
+        eventEndTime.setMinutes(+endMinute);
+
+        // Determine if the event end time has passed
+        hasPassed = eventEndTime < today;
+    } catch (error) {
+        console.error('Unexpected eventTime format:', error);
+        // Fallback to original eventTime string
+        eventStartTime = eventEndTime = null;
+        hasPassed = false;
+    }
 
     // State to toggle the registration form
     const [isRegisterVisible, setIsRegisterVisible] = useState(false);
@@ -66,6 +77,7 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
     };
 
     return (
+        // Event component
         <div className={`${isVertical ? 'w-2/6' : 'w-full'} flex flex-wrap justify-center t200e ${hasPassed ? 'fadein60' : ''}`}>
             <div className={`${isVertical ? 'flex' : 'hidden'} flex-col justify-center items-center m-5`}>
                 <div className='w-72 h-96 overflow-hidden'>
@@ -73,19 +85,19 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
                 </div>
 
                 <h1 className='my-5 text-white text-5xl text-center'>{eventTitle}</h1>
-                <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-xs my-2 flex justify-center lg:justify-start items-center`}>
                     <img className='mx-2 w-8 h-auto' src={calendarLogo} alt='calendar icon' />
                     <p className='text-white text-xl text-center lg:text-left'>
                         {eventDate}
                     </p>
                 </div>
-                <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
                     <img className='mx-2 w-8 h-auto' src={timeLogo} alt='time icon' />
                     <p className='text-white text-xl text-center lg:text-left'>
                         {eventTime}
                     </p>
                 </div>
-                <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
+                <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-sm my-2 flex justify-center lg:justify-start items-center`}>
                     <img className='mx-2 w-8 h-auto' src={locationLogo} alt='location icon' />
                     <p className='text-white text-xl text-center lg:text-left'>
                         {eventLocation}
@@ -93,34 +105,36 @@ function Event({ eventImg, eventTitle, eventDate, eventTime, eventLocation, isVe
                 </div>
             </div>
 
+            {/* events tab */}
+
             <div className={`${isVertical ? 'hidden' : 'flex'} 
                 w-11/12 bg-rosybrown p-10 m-5 rounded-xl flex-col lg:flex-row justify-between items-start drop-shadow-2xl`}>
                 <div className='w-full flex flex-col items-center lg:items-start lg:flex-row '>
                     <div className='w-full lg:w-72 h-96 overflow-hidden'>
                         <img className='w-full h-full object-cover object-center' src={eventImg} alt='icon' />
                     </div>
-                    <div className='flex flex-col mx-10 w-full lg:w-8/12 text-center lg:text-left'>
+                    <div className='flex flex-col mx-10 w-full lg:w-8/12 text-center lg:text-left font-light'>
                         <h1 className='my-5 text-white text-5xl'>{eventTitle}</h1>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm flex my-2 m-auto w-full lg:m-1 justify-center lg:justify-start items-center`}>
-                            <img className='mx-2 w-8 h-auto' src={calendarLogo} alt='calendar icon' />
-                            <p className='text-white text-xl text-center lg:text-left'>
+                        <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-xs flex my-2 m-auto w-full lg:m-1 justify-center lg:justify-start items-center`}>
+                            <img className='w-6  h-auto' src={calendarLogo} alt='calendar icon' />
+                            <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventDate}
                             </p>
                         </div>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
-                            <img className='mx-2 w-8 h-auto' src={timeLogo} alt='time icon' />
-                            <p className='text-white text-xl text-center lg:text-left'>
+                        <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-xs my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
+                            <img className='w-6 h-auto' src={timeLogo} alt='time icon' />
+                            <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventTime}
                             </p>
                         </div>
-                        <div className={`${!hasPassed ? 'btn-yellow' : 'btn-dsb'} max-w-sm my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
-                            <img className='mx-2 w-8 h-auto' src={locationLogo} alt='location icon' />
-                            <p className='text-white text-xl text-center lg:text-left'>
+                        <div className={`${!hasPassed ? 'fact-yellow' : 'fact-dsb'} max-w-xs my-2 m-auto w-full lg:m-1 flex justify-center lg:justify-start items-center`}>
+                            <img className='w-6 h-auto' src={locationLogo} alt='location icon' />
+                            <p className='mx-3 text-white text-md text-center lg:text-left'>
                                 {eventLocation}
                             </p>
                         </div>
 
-                        <p className='my-5'>
+                        <p className='my-3 text-2xl'>
                             {eventDescription}
                         </p>
                     </div>
