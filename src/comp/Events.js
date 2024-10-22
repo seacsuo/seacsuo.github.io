@@ -39,7 +39,7 @@ function Events({ isOnLanding }) {
         'EME 0252',
         isOnLanding,
         'Come play, snack, and have fun! Enjoy a variety of Asian games with your friends, meet new people, and snack your way through the night!',
-        ''
+        'https://docs.google.com/forms/d/e/1FAIpQLSd9KlGaTK7IgVPkEcc9g_EnaOvSxQAbjXaUxoXtEIQfbcC-kA/viewform'
     );
 
 
